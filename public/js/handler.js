@@ -108,9 +108,13 @@ async function submitPrompt(){
             body: JSON.stringify({promptAnswer1: document.getElementById('promptAnswer').getAttribute('firstAnswer'),promptAnswer2: document.getElementById('promptAnswer').value, username:username})
 
         })
+        //send the user to a waiting area
+        hideAllSections();
+        showSection('promptPageWaiting');
     }
 
-    //send the user to a waiting area
+
+
 }
 //**END OF CODE FOR PROMPT PAGE**
 
